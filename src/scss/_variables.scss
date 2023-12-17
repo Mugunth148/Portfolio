@@ -12,12 +12,4 @@
     --secondary: #fff6e5;
   } 
   
-   @font-face {
-    font-family: lemon;
-    src: url("../../public/font/lemon-regular.otf");
-  }
-
-  @font-face {
-    font-family: lemon-wide;
-    src: url("../../public/font/lemon-wide.otf");
-  }
+ @import "../../public/public.scss";

@@ -21,16 +21,44 @@
         .logo {
             text-decoration: none;
             color: var(--black);
-            font-size: 3em;
+            font-size: 2em;
             font-weight: 600;
-            text-transform: uppercase;
             font-family: lemon;
             letter-spacing: 0.02em;
             
+            .hero-logo {
+                height: 100%;
+                width: 100%;
+                overflow: hidden;
+                display:block;
+                position: relative;
+                cursor: pointer;
 
-            &:hover {
-                font-family: lemon-wide;
+                &::before {
+                    position: absolute;
+                    content: attr(data-text);
+                    color: var(--black);
+                    top: 100%;
+                    opacity: 0;
+                    transition: all 1s ease;
+
+                    &:hover {
+                        top: 0;
+                        opacity: 1;
+                    }
+                }
+
+                span {
+                      transition: all 1s ease;
+                      display: block;
+                      color: var(--black);
+
+                        &:hover{
+                            transform: translateY(-100%);
+                        }
+                }
             }
+        
         }
 
         .menu {

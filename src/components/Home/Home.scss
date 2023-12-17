@@ -9,58 +9,170 @@
   .hero {
     height: 100svh;
     width: 100%;
-    
+
     .hero-text-wrapper {
-       height: 60vh;
-       width: 100%;
-         display: flex;
-        justify-content: center;
-        align-items: flex-end;
-            
-            .hero-text {
-                font-size: 8rem;
-                font-family: lemon;
-                color: var(--primary);
-                text-align: center;
-                text-transform: uppercase;
-                letter-spacing: 0.3rem;
-               
-            }
+      height: 60vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
 
-            .hero-line {
-                height: 0em;
-                width: 0%;
-                background-color: var(--black);
-                margin-left: 1.1em;
-                margin-right: 1.1em;
-                margin-bottom: 4.2em;
-                
-            }
+      .hero-text {
+        font-size: 8rem;
+        font-family: lemon;
+        color: var(--primary);
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.3rem;
+      }
 
+      .hero-line {
+        height: 0em;
+        width: 0%;
+        background-color: var(--black);
+        margin-left: 1.1em;
+        margin-right: 1.1em;
+        margin-bottom: 4.2em;
+      }
     }
 
-    .hero-video-overlay {
-      position:absolute;
+    .ball-container-overlay {
+      position: absolute;
       bottom: 0;
-      left:0;
+      left: 0;
       height: 7vh;
       width: 100%;
       background-color: var(--black);
     }
 
-    .hero-video {
+    .ball-container {
       height: 100svh;
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-      transform:translateY(40%);
-      z-index: 5;
-      background: #000;
+      transform: translateY(40%);
+      z-index: 0;
+      position: relative;
+      margin: auto;
+      background-color: var(--black);
+      overflow: hidden;
 
-      .spline-hero {
-        height: 100%;
-        width: 100%;          
+      .pink-ball {
+        position: absolute;
+        top: -20%;
+        left: -10%;
+        width: 800px;
+        height: 800px;
+        z-index: -1;
+        background: rgb(228, 44, 105);
+        border-radius: 800px;
+        filter: blur(140px);
+        backdrop-filter: blur(140px);
+        animation: pink 4s infinite linear;
+        animation-delay: 0s;
+      }
+
+      .blue-ball {
+        position: absolute;
+        top: -20%;
+        left: -10%;
+        width: 800px;
+        height: 800px;
+        z-index: -1;
+        background-color: rgb(45, 235, 166);
+        border-radius: 500px;
+        filter: blur(150px);
+        animation: blue 4s infinite linear;
+        animation-delay: 0s;
+      }
+
+      .yellow-ball {
+        position: absolute;
+        top: -20%;
+        left: -10%;
+        width: 600px;
+        height: 600px;
+        z-index: -1;
+        background-color: rgb(52, 115, 233);
+        border-radius: 500px;
+        filter: blur(160px);
+        animation: green 4s infinite linear;
+        animation-delay: -3s;
+      }
+
+      @keyframes pink {
+        0%,
+        100% {
+          top: 80%;
+          left: 70%;
+        }
+        20% {
+          top: -70%;
+          left: 50%;
+        }
+        40% {
+          top: 60%;
+          left: 30%;
+        }
+
+        60% {
+          top: 0%;
+          left: 0%;
+        }
+        80% {
+          top: 60%;
+          left: 30%;
+        }
+      }
+
+      @keyframes blue {
+        0%,
+        100% {
+          top: 70%;
+          left: 20%;
+        }
+        20% {
+          top: 30%;
+          left: 90%;
+        }
+        40% {
+          top: 70%;
+          left: 0%;
+        }
+        60% {
+          top: 0%;
+          left: 0%;
+        }
+        80% {
+          top: 50%;
+          left: 100%;
+        }
+      }
+
+      @keyframes green {
+        0%,
+        100% {
+          top: 0%;
+          left: 0%;
+        }
+        20% {
+          top: -70%;
+          left: 50%;
+        }
+        40% {
+          top: 10%;
+          left: 30%;
+        }
+
+        60% {
+          top: 70%;
+          left: -2%;
+        }
+        80% {
+          top: 20%;
+          left: 70%;
+        }
       }
     }
   }
