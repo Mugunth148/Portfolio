@@ -1,0 +1,18 @@
+@import './scss/variables';
+
+// Path: src/scss/variables.scss
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    background-color: var(--primary);
+    color: var(--black); 
+}
+
+
