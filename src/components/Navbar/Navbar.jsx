@@ -1,4 +1,4 @@
-import "./navbar.scss";
+import "./Navbar.scss";
 import { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { Link } from "react-router-dom";
