@@ -32,30 +32,31 @@
                 overflow: hidden;
                 display:block;
                 position: relative;
+                text-decoration: none;
                 cursor: pointer;
 
-                &::before {
+                &:hover::before {
                     position: absolute;
+                    top: 0;
+                    display: block;
                     content: attr(data-text);
                     color: var(--black);
-                    top: 100%;
-                    opacity: 0;
-                    transition: all 1s ease;
+                    transform: translateX(100%);
+                    transition: all 1s;      
+                }
 
-                    &:hover {
-                        top: 0;
-                        opacity: 1;
-                    }
+                &:hover span {
+                    transform: translateX(-100%);
+                }
+
+                &::before:hover {
+                    transform: translateX(10%);
                 }
 
                 span {
-                      transition: all 1s ease;
+                      transition:  1s;
                       display: block;
-                      color: var(--black);
-
-                        &:hover{
-                            transform: translateY(-100%);
-                        }
+                      color: var(--black);                
                 }
             }
         
