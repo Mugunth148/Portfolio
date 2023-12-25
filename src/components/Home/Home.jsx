@@ -7,7 +7,7 @@ const Home = () => {
     // const tl = gsap.timeline();
 
     gsap.to(".hero-line", {
-      height: "0.3em",
+      height: "0.20em",
       width: "30%",
       duration: 1.5,
       ease: "expo.inOut",
@@ -20,7 +20,9 @@ const Home = () => {
     gsap.fromTo(
       ".ball-container-overlay",
       { height: "7svh" },
-      { height: "40svh", duration: 1.5, ease: "expo.out" }
+      document.innerWidth < "768px"
+        ? { height: "50svh", duration: 1.5, ease: "expo.out" }
+        : { height: "40svh", duration: 1.5, ease: "expo.out" }
     );
     gsap.to(".ball-container", {
       y: 0,
@@ -47,7 +49,6 @@ const Home = () => {
           <div className="ball-container-overlay"></div>
           <div className="ball-container">
             <div className="pink-ball"></div>
-            <div className="blue-ball"></div>
             <div className="yellow-ball"></div>
           </div>
         </div>

@@ -19,7 +19,7 @@ const Loader = ({ animationComplete }) => {
       );
 
       gsap.to(wordGroupsRef.current, {
-        yPercent: -80,
+        yPercent: -79,
         duration: 5,
         ease: "power3.inOut",
       });

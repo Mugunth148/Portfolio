@@ -45,7 +45,7 @@ const Navbar = () => {
                 }}
               >
                 {" "}
-                Coded by
+                Coded by 
               </a>
             </div>
           </div>
@@ -126,7 +126,7 @@ const Navbar = () => {
                     : "all 2s cubic-bezier(0.16, 1, 0.3, 1) 0s",
                 }}
               >
-                Get In Touch
+                Contact
               </Link>
               <div className="nav-wrap"></div>
             </li>
@@ -149,7 +149,7 @@ const Navbar = () => {
                   transitionDelay: menuOpen ? "1s" : "0s",
                 }}
               >
-                Coimbatore, India
+                CBE, India
               </span>
             </div>
             <div className="nav-social">

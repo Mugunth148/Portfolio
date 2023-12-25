@@ -3,13 +3,15 @@
     --secondary: #111;
     --black: #0d0d11;
     --blue:#3353d3;
-    --bluehover: #2d49b9;
-    
+    --bluehover: #2d49b9;  
+  }
+
+  * {
+    font-family: "Helvetica";
   }
   
   [data-theme="dark"] {
     --primary: #111;
     --secondary: #fff6e5;
   } 
-  
- @import "../../public/public.scss";
+ 

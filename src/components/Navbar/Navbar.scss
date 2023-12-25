@@ -29,15 +29,20 @@
                 position: relative;
                 text-decoration: none;
                 color: var(--black);
-                font: 600 2em lemon;
-                letter-spacing: 0.03em;
-                transition: all 1s;
+                font: 400 1.5em "Helvetica";
+                letter-spacing: -0.08em;
+                transition: all 0.5s;
                 display: flex;
                 flex-direction: column;
-                margin-left: 4px;
+                margin-left: 2px;
 
                 &::before {
                     content: attr(data-text);
+                    background-image: linear-gradient(125deg, #d42377, #1c90fd);
+                    background-color: #208df8;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
                     position: absolute;
                     transform: translateY(100%);
                     opacity: 1;
@@ -148,16 +153,11 @@
                     color: var(--primary);
                     font-size: 6em;
                     font-weight: 600;
-                    letter-spacing: 0.03em;
+                    letter-spacing: -0.07em;
+                    line-height: 1.1em;
                     text-transform: uppercase;
-                    font-family: lemon;
+                    font-family: "Helvetica";
                     top: 0;
-
-
-                    &:hover {
-                        font-family: lemon-wide;
-
-                    }
                 }
 
                 .nav-wrap:after {
@@ -177,9 +177,6 @@
 
         }
 
-
-
-
         .nav-footer {
             position: absolute;
             bottom: 0;
@@ -195,8 +192,8 @@
                 text-decoration: none;
                 color: var(--primary);
                 text-transform: uppercase;
-                font-family: lemon;
-                font-size: 1.5em;
+                font-family: "Helvetica";
+                font-size: 1em;
                 font-weight: 500;
                 letter-spacing: 0.03em;
                 transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
@@ -210,21 +207,38 @@
 
                     li {
                         list-style: none;
-
+                        
                         a {
                             position: relative;
                             bottom: -20px;
                             text-decoration: none;
                             color: var(--primary);
                             text-transform: uppercase;
-                            font-size: 1.5em;
+                            font-size: 1em;
                             font-weight: 500;
-                            font-family: lemon;
+                            font-family: "Helvetica";
                             padding-left: 2em;
                             letter-spacing: 0.03em;
                             opacity: 0;
                             transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
 
+                            &::before {
+                               content: "";
+                                position: absolute;
+                                top: 100%;
+                                left: 2em;
+                                width: 0%;
+                                height: 1%;
+                                background-color: var(--primary);
+                                transform-origin: left;
+                                margin: 0 auto;
+                                transition: all 1s ease;
+                            }
+
+                        }
+
+                        &:hover a::before {
+                            width: 70%;
                         }
                     }
                 }
@@ -240,26 +254,25 @@
 }
 
 
-@media(max-width: 900px) {
+@media(max-width: 600px) {
 
     .nav .nav-overlay ul.nav-links li a {
-        font-size: 6em;
+        font-size: 4em;
         font-weight: 600;
+        line-height: 1.5em;
         white-space: nowrap;
         letter-spacing: 0.02em;
     }
 
-
     .nav .navbar {
         .logo {
-            font-size: 1em;
+            font-size: 0.8em;
             letter-spacing: 0.03em;
         }
     }
 
-
     .location {
-        font-size: 1.5em;
+        font-size: 1.2em;
         letter-spacing: 0.03em;
     }
 
@@ -268,6 +281,7 @@
     }
 
     .nav-social ul li a {
+        font-size: 1.5em;
         padding-right: 0.6em;
         letter-spacing: 0.03em;
     }

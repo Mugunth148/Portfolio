@@ -52,8 +52,11 @@
 
   &__word {
     display: block;
-    font-family: lemon;
-    font-size: 3.2rem;
+    font-family: "Helvetica";
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    font-size: 2.5rem;
+    text-transform: capitalize;
   }
 
   &__progressWrapper {
@@ -81,8 +84,9 @@
     z-index: 4;
     white-space: nowrap;
     color: var(--primary);
-    font-family: lemon;
-    font-size: 3.2rem;
+    font-family:"Helvetica" ;
+    font-size: 2.5rem;
+    letter-spacing: -0.03em;
   }
 }
 
