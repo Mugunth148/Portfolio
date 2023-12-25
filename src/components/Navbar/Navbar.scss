@@ -16,57 +16,47 @@
         justify-content: space-between;
         align-items: center;
         padding: 2rem;
-        
-        
-        .logo {
-            text-decoration: none;
-            color: var(--black);
-            font-size: 2em;
-            font-weight: 600;
-            font-family: lemon;
-            letter-spacing: 0.02em;
-            
-            .hero-logo {
-                height: 100%;
-                width: 100%;
-                overflow: hidden;
-                display:block;
+        overflow: hidden;
+
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+
+
+            a {
                 position: relative;
                 text-decoration: none;
-                cursor: pointer;
+                color: var(--black);
+                font: 600 2em lemon;
+                letter-spacing: 0.03em;
+                transition: all 1s;
+                display: flex;
+                flex-direction: column;
+                margin-left: 4px;
 
-                &:hover::before {
-                    position: absolute;
-                    top: 0;
-                    display: block;
+                &::before {
                     content: attr(data-text);
-                    color: var(--black);
-                    transform: translateX(100%);
-                    transition: all 1s;      
-                }
-
-                &:hover span {
-                    transform: translateX(-100%);
-                }
-
-                &::before:hover {
-                    transform: translateX(10%);
-                }
-
-                span {
-                      transition:  1s;
-                      display: block;
-                      color: var(--black);                
+                    position: absolute;
+                    transform: translateY(100%);
+                    opacity: 1;
                 }
             }
-        
+
+            &:hover a {
+
+                transform: translatey(-110%);
+
+            }
+
         }
 
         .menu {
-            cursor:crosshair;
-            
+            cursor: crosshair;
+
         }
-        
+
         .hambox {
             position: relative;
             width: 44px;
@@ -77,8 +67,9 @@
             padding: 2.4em;
             background-color: var(--blue);
 
-            .linetop, .linebottom {
-                position:absolute;
+            .linetop,
+            .linebottom {
+                position: absolute;
                 margin: 0 auto;
                 display: block;
                 width: 27px;
@@ -89,14 +80,14 @@
                 transform: rotate(0deg);
                 transition: all 0.4s;
             }
-    
+
             .linetop {
                 top: 2.2em;
             }
-    
+
             .linebottom {
                 bottom: 2.2em;
-            }  
+            }
 
             .linetop.spin {
                 transform: rotate(-40deg);
@@ -132,7 +123,7 @@
         overflow: hidden;
         padding: 4em;
         transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
-        
+
 
         ul.nav-links {
             position: absolute;
@@ -146,12 +137,12 @@
             justify-content: center;
             align-items: center;
 
-            
+
             li {
                 position: relative;
                 list-style: none;
-                
-                 a {
+
+                a {
                     position: relative;
                     text-decoration: none;
                     color: var(--primary);
@@ -161,33 +152,33 @@
                     text-transform: uppercase;
                     font-family: lemon;
                     top: 0;
-                    
+
 
                     &:hover {
                         font-family: lemon-wide;
-                        
+
                     }
                 }
-                 
+
                 .nav-wrap:after {
                     content: "";
                     position: absolute;
                     top: 120%;
-                    left:-10%;
+                    left: -10%;
                     width: 120%;
                     height: 100%;
                     background-color: var(--black);
                     margin: 0 auto;
-                    
-                    
-               }
-               
+
+
                 }
 
-        }
-        
+            }
 
-       
+        }
+
+
+
 
         .nav-footer {
             position: absolute;
@@ -197,8 +188,8 @@
             padding: 2em;
             display: flex;
             justify-content: space-between;
-         
-              .location {
+
+            .location {
                 position: relative;
                 bottom: -20px;
                 text-decoration: none;
@@ -209,17 +200,17 @@
                 font-weight: 500;
                 letter-spacing: 0.03em;
                 transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
-              }
+            }
 
 
-              .nav-social {
+            .nav-social {
                 ul {
                     display: flex;
-                    
+
 
                     li {
                         list-style: none;
-                        
+
                         a {
                             position: relative;
                             bottom: -20px;
@@ -242,7 +233,9 @@
 
     }
 }
-.nav, .navbar {
+
+.nav,
+.navbar {
     z-index: 1;
 }
 
@@ -250,20 +243,20 @@
 @media(max-width: 900px) {
 
     .nav .nav-overlay ul.nav-links li a {
-         font-size: 6em;
-         font-weight:600;
-         white-space: nowrap;
-         letter-spacing: 0.02em;
+        font-size: 6em;
+        font-weight: 600;
+        white-space: nowrap;
+        letter-spacing: 0.02em;
     }
 
 
     .nav .navbar {
         .logo {
-            font-size: 2.2em;
+            font-size: 1em;
             letter-spacing: 0.03em;
         }
     }
-    
+
 
     .location {
         font-size: 1.5em;
@@ -274,10 +267,9 @@
         justify-content: space-around;
     }
 
-    .nav-social ul li  a {
+    .nav-social ul li a {
         padding-right: 0.6em;
         letter-spacing: 0.03em;
     }
-    
-}
 
+}
