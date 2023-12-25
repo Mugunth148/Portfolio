@@ -58,6 +58,7 @@
       background-color: var(--black);
       overflow: hidden;
 
+
       .pink-ball {
         position: absolute;
         top: -20%;
@@ -69,7 +70,8 @@
         border-radius: 800px;
         filter: blur(140px);
         backdrop-filter: blur(140px);
-        animation: pink 4s infinite linear;
+        -webkit-backdrop-filter: blur(140px);
+        animation: pink 40s infinite linear;
         animation-delay: 0s;
       }
 
@@ -83,7 +85,7 @@
         background-color: rgb(45, 235, 166);
         border-radius: 500px;
         filter: blur(150px);
-        animation: blue 4s infinite linear;
+        animation: blue 40s infinite linear;
         animation-delay: 0s;
       }
 
@@ -97,7 +99,7 @@
         background-color: rgb(52, 115, 233);
         border-radius: 500px;
         filter: blur(160px);
-        animation: green 4s infinite linear;
+        animation: green 40s infinite linear;
         animation-delay: -3s;
       }
 
