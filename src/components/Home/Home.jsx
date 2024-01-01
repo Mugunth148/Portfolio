@@ -3,9 +3,11 @@ import "./Home.scss";
 import { gsap } from "gsap";
 
 const Home = () => {
+
+  const mobile = window.innerWidth <= 768;
+
   useEffect(() => {
-    // const tl = gsap.timeline();
-    const mobile = window.innerWidth <= 768;
+    // const tl = gsap.timeline()
 
     gsap.to(".hero-line", {
       height: "0.20em",
@@ -41,8 +43,8 @@ const Home = () => {
 
     const handleScroll = () => {
       const scrollProgress = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-      const color = gsap.utils.interpolate('#0d0d11', '#FFFAF0')(scrollProgress);
-      
+      const color = scrollProgress >= 0.5 ? '#FFFAF0' : '#0d0d11';
+
       gsap.to(section, { backgroundColor: color, ease: 'linear' });
     };
 
@@ -52,7 +54,7 @@ const Home = () => {
       window.removeEventListener('scroll', handleScroll);
     };
 
-  }, []);
+  }, [mobile]);
 
   return (
     <>
@@ -65,11 +67,15 @@ const Home = () => {
           </div>
           <div className="ball-container-overlay"></div>
           <div className="ball-container">
-            <div className="pink-ball"></div>
-            <div className="yellow-ball"></div>
+             <div className="pink-ball"></div>
+              <div className="blue-ball"></div>
+             <video src="../../public/webm/abstract.webm" autoPlay loop muted 
+            style={{ width: document.innerWidth = mobile ? '200%' : '100%', height: 'auto' }}
+            ></video> 
           </div>
         </div>
       </div>
+      
     </>
   );
 };

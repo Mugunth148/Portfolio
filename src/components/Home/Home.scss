@@ -54,7 +54,7 @@
       align-items: center;
       transform: translateY(40%);
       z-index: 0;
-      position: relative;
+      
       margin: auto;
       background-color: var(--black);
       overflow: hidden;
@@ -74,7 +74,7 @@
         animation-delay: 0s;
       }
 
-      .yellow-ball {
+      .blue-ball {
         position: absolute;
         top: -20%;
         left: -10%;
@@ -120,7 +120,7 @@
           left: 20%;
         }
         20% {
-          top: 30%;
+          top: -30%;
           left: 90%;
         }
         40% {
@@ -162,10 +162,6 @@
         .blue-ball {
           width: 400px;
           height: 400px;
-        }
-        .yellow-ball {
-          width: 300px;
-          height: 300px;
         }
       }
     }

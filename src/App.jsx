@@ -31,10 +31,9 @@ const App = () => {
  return (
     <>
     {!isLoaderComplete && <Loader animationComplete={handleLoaderComplete} />}
-    {/* <Loader /> */}
      <Navbar />
-     {/* <Home /> */}
      {isLoaderComplete && <Home />}
+      
     </>
   )
 }
