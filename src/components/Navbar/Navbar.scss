@@ -141,23 +141,26 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+           
 
 
             li {
                 position: relative;
                 list-style: none;
-
+                
                 a {
                     position: relative;
                     text-decoration: none;
                     color: var(--primary);
                     font-size: 6em;
                     font-weight: 600;
-                    letter-spacing: -0.07em;
+                    letter-spacing: -0.04em;
                     line-height: 1.1em;
                     text-transform: uppercase;
                     font-family: "Helvetica";
                     top: 0;
+
+                  
                 }
 
                 .nav-wrap:after {
@@ -176,6 +179,7 @@
             }
 
         }
+
 
         .nav-footer {
             position: absolute;
@@ -257,7 +261,7 @@
 @media(max-width: 600px) {
 
     .nav .nav-overlay ul.nav-links li a {
-        font-size: 4em;
+        font-size: 3.5em;
         font-weight: 600;
         line-height: 1.5em;
         white-space: nowrap;
@@ -272,7 +276,7 @@
     }
 
     .location {
-        font-size: 1.2em;
+        font-size: 1em;
         letter-spacing: 0.03em;
     }
 
@@ -281,7 +285,7 @@
     }
 
     .nav-social ul li a {
-        font-size: 1.5em;
+        font-size: 1em;
         padding-right: 0.6em;
         letter-spacing: 0.03em;
     }

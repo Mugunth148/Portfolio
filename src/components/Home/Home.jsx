@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 const Home = () => {
   useEffect(() => {
     // const tl = gsap.timeline();
+    const mobile = window.innerWidth <= 768;
 
     gsap.to(".hero-line", {
       height: "0.20em",
@@ -20,7 +21,7 @@ const Home = () => {
     gsap.fromTo(
       ".ball-container-overlay",
       { height: "7svh" },
-      document.innerWidth < "768px"
+      document.innerWidth = mobile
         ? { height: "50svh", duration: 1.5, ease: "expo.out" }
         : { height: "40svh", duration: 1.5, ease: "expo.out" }
     );
@@ -35,6 +36,22 @@ const Home = () => {
       duration: 2,
       delay: 2.5,
     });
+
+    const section = document.getElementsByClassName('ball-container');
+
+    const handleScroll = () => {
+      const scrollProgress = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+      const color = gsap.utils.interpolate('#0d0d11', '#FFFAF0')(scrollProgress);
+      
+      gsap.to(section, { backgroundColor: color, ease: 'linear' });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+
   }, []);
 
   return (

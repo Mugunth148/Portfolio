@@ -3,15 +3,15 @@
 }
 
 .home-container {
-  height: 100svh;
+  height: 100dvh;
   width: 100%;
 
   .hero {
-    height: 100svh;
+    height: 100vh;
     width: 100%;
 
     .hero-text-wrapper {
-      height: 60vh;
+      height: 60dvh;
       width: 100%;
       display: flex;
       justify-content: center;
@@ -47,7 +47,7 @@
     }
 
     .ball-container {
-      height: 100svh;
+      height: 100dvh;
       width: 100%;
       display: flex;
       justify-content: center;
@@ -69,10 +69,8 @@
         z-index: -1;
         background: rgb(228, 44, 105);
         border-radius: 800px;
-        filter: blur(140px);
-        backdrop-filter: blur(140px);
-        -webkit-backdrop-filter: blur(140px);
-        animation: pink 40s infinite linear;
+        filter: blur(90px);
+        animation: pink 20s infinite linear;
         animation-delay: 0s;
       }
 
@@ -80,13 +78,13 @@
         position: absolute;
         top: -20%;
         left: -10%;
-        width: 600px;
+        width: 700px;
         height: 600px;
         z-index: -1;
-        background-color: rgb(52, 115, 233);
-        border-radius: 500px;
-        filter: blur(160px);
-        animation: green 40s infinite linear;
+        background-color: rgb(37, 108, 240);
+        border-radius: 800px;
+        filter: blur(140px);
+        animation: blue 20s infinite linear;
         animation-delay: -3s;
       }
 
@@ -110,7 +108,7 @@
           left: 0%;
         }
         80% {
-          top: 60%;
+          top: 40%;
           left: 30%;
         }
       }
@@ -118,7 +116,7 @@
       @keyframes blue {
         0%,
         100% {
-          top: 70%;
+          top: 20%;
           left: 20%;
         }
         20% {
@@ -130,37 +128,12 @@
           left: 0%;
         }
         60% {
-          top: 0%;
+          top: 30%;
           left: 0%;
         }
         80% {
-          top: 50%;
-          left: 100%;
-        }
-      }
-
-      @keyframes green {
-        0%,
-        100% {
-          top: 0%;
-          left: 0%;
-        }
-        20% {
-          top: -70%;
-          left: 50%;
-        }
-        40% {
-          top: 10%;
-          left: 30%;
-        }
-
-        60% {
           top: 70%;
-          left: -2%;
-        }
-        80% {
-          top: 20%;
-          left: 70%;
+          left: 60%;
         }
       }
     }
