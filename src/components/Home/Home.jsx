@@ -70,8 +70,7 @@ const Home = () => {
              <div className="pink-ball"></div>
               <div className="blue-ball"></div>
              <video src="../../public/webm/abstract.webm" autoPlay loop muted 
-            style={{ width: document.innerWidth = mobile ? '200%' : '100%', height: 'auto' }}
-            ></video> 
+             ></video> 
           </div>
         </div>
       </div>

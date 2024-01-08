@@ -136,6 +136,11 @@
           left: 60%;
         }
       }
+
+      > video {
+        height: auto;
+        width: 100%;
+      }
     }
   }
 }
@@ -162,6 +167,11 @@
         .blue-ball {
           width: 400px;
           height: 400px;
+        }
+
+        > video {
+          height: auto;
+          width: 220%;
         }
       }
     }
